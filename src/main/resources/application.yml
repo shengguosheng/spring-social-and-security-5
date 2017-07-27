@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+#    org.springframework.boot.autoconfigure: DEBUG
+
+spring:
+  thymeleaf:
+    cache: false
+    
+management:
+  security:
+    enabled: false
+
+security:
+  oauth2:
+    client:
+#      google:
+#        client-id: your-app-client-id
+#        client-secret: your-app-client-secret
+#      github:
+#        client-id: your-app-client-id
+#        client-secret: your-app-client-secret
+#        user-name-attribute-name: "name"
+      facebook:
+        client-id: 1464982263548084
+        client-secret: f69be4b87a8d0eb021587adf40877956
+        user-name-attribute-name: "name"
+        scopes: public_profile, email, user_posts
+#      okta:
+#        client-id: your-app-client-id
+#        client-secret: your-app-client-secret
+#        authorization-uri: https://your-subdomain.oktapreview.com/oauth2/v1/authorize
+#        token-uri: https://your-subdomain.oktapreview.com/oauth2/v1/token
+#        user-info-uri: https://your-subdomain.oktapreview.com/oauth2/v1/userinfo
+#        jwk-set-uri: https://your-subdomain.oktapreview.com/oauth2/v1/keys
